@@ -1,7 +1,28 @@
-var fizz = "Fizz";
-var buzz = "Buzz";
-var FizzBuzz = "FizzBuzz";
+$(document).ready(function (){
 
-while (fizz <= 100) {
-	console.log(100)
-}
+	function isFizzBuzz(number) {
+		return number % 3 === 0 && number % 5 === 0;
+	}
+
+	function isFizz(number) {
+		return number % 3 === 0;
+	}
+
+	function isBuzz(number) {
+		return number % 5 === 0;
+	}
+
+	for (i=1; i <= 100; i++){
+		if (isFizzBuzz(i)) {
+			console.log("fizzbuzz");
+		} else if (isFizz(i)) {
+			console.log("Fizz");
+		} else if (isBuzz(i)) {
+			console.log("Buzz");
+		} else { 
+			console.log(i); 
+		}
+
+	}
+
+});
