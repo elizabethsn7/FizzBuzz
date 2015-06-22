@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$( document ).ready(function() {
 
 	function isFizzBuzz(number) {
 		return number % 3 === 0 && number % 5 === 0;
@@ -12,6 +12,20 @@ $(document).ready(function (){
 		return number % 5 === 0;
 	}
 
+$('form').submit(function(e) {
+	e.preventDefault();
+	
+	if ($('.iteminput').val() === '') {
+			console.log('empty item');
+		}
+
+
+	var maxnumber = $('.iteminput').val();
+
+	$('.input-number').click(function() {
+		
+	})
+	
 	for (i=1; i <= 100; i++){
 		if (isFizzBuzz(i)) {
 			console.log("fizzbuzz");
@@ -22,7 +36,8 @@ $(document).ready(function (){
 		} else { 
 			console.log(i); 
 		}
+	}	
 
-	}
+	});
 
 });
